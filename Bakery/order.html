@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order | The Golden Bakery</title>
+   
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(41, 79%, 41%);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #dd2013;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+body{background-color: rgb(250, 249, 169);}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="menu.html">Menu</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+</ul>
+
+<form action="invoice.php" method = "post">
+
+    <h1 align = "center">Order Details</h1>
+    <p align = "center"><i>Please fill in this form*</i></p>
+    <table align = "center">
+
+        <tr>
+            <td>Name: </td>
+            <td> <input type ="text" name= "name" size= "30" required></td>
+        </tr>
+
+        <tr>
+            <td>Address: </td>
+            <td> <input type ="text" name= "address" size= "30" required></td>
+        </tr>
+
+        <tr>
+            <td>Phone No: </td>
+            <td> <input type ="text" name= "phone" size="10" required></td>
+        </tr>
+
+        <tr>
+            <td>Payment Method:</td>
+            <td><select name="payment" required>
+                <option value="Select a payment">Select a payment</option>
+                <option value="VisaCard">VisaCard</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Online Banking">Online Banking</option>
+                <option value="COD">COD</option>
+            </select>
+            </td>
+         </tr>
+
+         <tr>
+            <td>Order Date: </td>
+            <td> <input type ="date" name= "orderdate" size="10" required></td>
+        </tr>
+
+        <tr>
+            <td>Delivery Time:</td>
+            <td><select name="deliverytime" required>
+                <option value="Select a time">Select a time</option>
+                <option value="11am - 1pm">11am - 1pm </option>
+                <option value="1pm - 3pm">1pm - 3pm</option>
+                <option value="3pm - 5pm">3pm - 5pm</option>
+                <option value="5pm - 7pm">5pm - 7pm</option>
+            </select>
+            </td>
+         </tr>
+
+        <tr>
+            <td>Card Message:</td>
+            <td><textarea name="message" rows="6" cols="30" required>
+            </textarea></td>
+        </tr>
+    </table>
+    
+    <table align = "center">
+        &nbsp;
+
+        <tr>
+            <th>Cake</th>
+            <th>Price(RM) </th>
+            <th>Quantity</th>
+        </tr>
+
+        <tr>
+            <th>Tiramisu Cake</th>
+            <th>60.00</th>
+            <th><input type="text" name="Q1" size="10" required></th>
+        </tr>
+
+        <tr>
+            <th>Red Velvet Cake</th>
+            <th>60.00</th>
+            <th><input type="text" name="Q2" size="10" required></th>
+        </tr>
+
+        <tr>
+            <th>Carrot Cake</th>
+            <th>65.00</th>
+            <th><input type="text" name="Q3" size="10" required></th>
+        </tr>
+
+        <tr>
+            <th>Chocolate Cake</th>
+            <th>65.00</th>
+            <th><input type="text" name="Q4" size="10" required></th>
+        </tr>
+        <br>
+            <tr>
+                <td><input type="submit" name="submitBtn" value="Submit"></td>
+            </tr>
+        </table>
+
+</form>
+</body>

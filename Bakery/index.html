@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Golden Bakery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {text-align: center;
+color:rgb(0, 0, 0);
+font-family:'Times New Roman', Times, serif;
+}
+
+p {text-align: center;
+font-family: 'Times New Roman', Times, serif;
+color:rgb(0, 0, 0);}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="menu.html">Menu</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+  <div class="dropdown">
+ <button class="dropbtn" onclick="myFunction()">Login
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="signIn.html">Login for User</a>
+    <a href="login.html">Login for Admin</a>
+  </div>
+  </div> 
+</ul>
+
+<br>
+<img src = "logo.jpg" alt = "logo company" width="20%" height="9%">
+<h3>WELCOME TO THE GOLDEN BAKERY</h3>
+<p>ARE YOU LOOKING FOR DELICIOUS CAKES?</p>
+<p>DON'T WORRY WE CAN HELP! YOU CAN CHECK OUR BEST CAKE SECTION.</p>
+<br><br><br>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="carrot cake.jpg" style="width:50%" height = "20%">
+    <div class="text">Carrot Cake</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="Tiramisu cake.jpg" style="width:50%" height = "10%">
+    <div class="text">Tiramisu cake</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="red velvet cake.jpg" style="width:50%" height = "10%">
+    <div class="text">Red Velvet Cake</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="chocolate cake.jpg" style="width:50%" height = "10%">
+    <div class="text">Chocolate Cake</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  </div>
+  <br>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+    <p><a href="menu.html">Click Here to Order</a></p>
+    <br>
+
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+      </script>
+  
+   
+</body>
+</html>
+
+    
